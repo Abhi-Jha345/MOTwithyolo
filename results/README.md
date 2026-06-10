@@ -9,7 +9,7 @@ Final validation metrics (best epoch) for each trained detector:
 | **Cable-car - YOLOv8n** | 100 | 0.891 | 0.393 | 0.964 | 0.792 |
 
 > YOLO26n reaches the highest **mAP@50-95** (tighter boxes) thanks to its
-> `reg_max=1` regression head; YOLOv8n edges ahead on mAP@50.
+> `reg_max=1` regression head. YOLOv8n edges ahead on mAP@50.
 
 ---
 
