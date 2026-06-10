@@ -1,0 +1,50 @@
+# Build artifacts
+build/
+*.o
+*.so
+*.out
+CMakeCache.txt
+CMakeFiles/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Model weights / engines (LocateAnything model excluded; platform-specific engines rebuildable)
+LocateAnything*/
+*.engine
+*.trt
+*.onnx
+*.safetensors
+# (trained YOLO .pt weights are tracked under weights/ — see .gitignore exception below)
+
+# Datasets & media
+dataset*/
+*.mp4
+*.avi
+*.mov
+*_tracked*.mp4
+calib_data/
+calib_dataset/
+
+# Logs & runs
+runs/
+*.log
+wandb/
+
+# OS
+.DS_Store
+*.swp
+
+# Keep our trained weights despite *.pt patterns elsewhere
+!weights/*.pt
+
+# Keep pre-built Jetson engines (platform-specific, documented)
+!jetson_pipeline/engines/*.engine
+
+# Keep demo output videos
+!demos/*.mp4
