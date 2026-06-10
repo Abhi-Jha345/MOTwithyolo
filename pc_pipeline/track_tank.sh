@@ -23,9 +23,4 @@ python "$SCRIPT_DIR/app.py" \
     -l "$SCRIPT_DIR/tank.names" \
     -m
 
-# Re-encode to H.264 for WhatsApp / browser compatibility
-echo "Re-encoding to H.264..."
-ffmpeg -i "$TMP" -vcodec libx264 -crf 23 -preset fast -an "$OUTPUT" -y -loglevel error
-rm "$TMP"
 
-echo "Done: $OUTPUT"
