@@ -33,7 +33,7 @@ ssh jetson "
     $TRACKER $ENGINE $REMOTE_IN $REMOTE_OUT 0.35 1
 "
 
-# 3. Re-encode to H.264 on Jetson (WhatsApp compatible)
+# 3. Re-encode to H.264 on Jetson 
 echo "[3/4] Encoding to H.264..."
 ssh jetson "
     ffmpeg -i $REMOTE_OUT \
