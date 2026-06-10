@@ -4,13 +4,13 @@ Offline data augmentation for the tank YOLO dataset.
 
 Why offline (and not just train.py's online aug)?
   train.py already augments each epoch (mosaic/mixup/HSV/affine), but that only
-  *varies* the few images you have - it never increases their number. With a tiny
+  varies the few images you have - it never increases their number. With a tiny
   dataset you also want more physical samples on disk so every epoch sees a richer
   pool and validation isn't starved. This script multiplies each image into N
-  augmented copies (with correctly transformed labels) BEFORE training; the online
+  augmented copies (with correctly transformed labels) BEFORE training, the online
   aug in train.py then stacks on top.
 
-Emphasis on artificial **shadows** (the dominant nuisance for outdoor vehicles):
+Emphasis on artificial shadows (the dominant nuisance for outdoor vehicles):
   - hard-edged cast shadows (random polygons),
   - soft ambient shadows (blurred polygon masks),
   - directional light/shade gradients,
